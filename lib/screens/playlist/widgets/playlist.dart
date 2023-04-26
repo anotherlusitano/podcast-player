@@ -1,11 +1,12 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:podcast_player/models/episode.dart';
 import 'package:podcast_player/scoped_models/scoped_playlist.dart';
 import 'package:scoped_model/scoped_model.dart';
+import 'episode_list.dart';
+import 'player.dart';
 
 class Playlist extends StatelessWidget {
-  const Playlist({super.key});
-
   final playlistManager;
 
   Playlist(this.playlistManager);
@@ -28,5 +29,9 @@ class Playlist extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _handleEpisodeListViewItemTap(Episode e) {
+    playlistManager.setSelectedEpisode(e);
   }
 }
