@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:podcast_player/models/episode.dart';
 import 'package:podcast_player/models/podcast.dart';
 import 'package:podcast_player/scoped_models/scoped_playlist.dart';
+import 'screens/playlist/widgets/playlist.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
     }
 
     return MaterialApp(
-      home: Playlist(),
+      home: Playlist(playlistManager),
     );
   }
 }
