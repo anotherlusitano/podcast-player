@@ -16,5 +16,7 @@ class ScopedPlaylist extends Model {
     }
     selectedEpisode = e;
     selectedEpisode.isPlaying = true;
+
+    notifyListeners();
   }
 }
